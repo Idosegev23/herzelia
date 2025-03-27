@@ -265,30 +265,33 @@
     }
 
     .section-title {
-      text-align: center;
       font-size: 2.8rem;
-      margin-bottom: 3.5rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 3rem;
       position: relative;
-      display: inline-block;
-      left: 50%;
-      transform: translateX(-50%);
       background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      padding-bottom: 15px;
+      display: inline-block;
+      padding: 0 1rem;
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .section-title::after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
+      width: 100px;
+      height: 3px;
       background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      border-radius: 2px;
+      border-radius: 3px;
     }
 
     .features, .benefits, .faq, .dates, .requirements, .location {
@@ -718,9 +721,10 @@
   
       .section-title {
         font-size: 2.2rem;
-        word-wrap: break-word;
-        hyphens: auto;
-        padding: 0 10px;
+        padding: 0 1rem;
+        margin-bottom: 2.5rem;
+        width: 100%;
+        box-sizing: border-box;
       }
       
       .feature-card h3, .instructor-name, .faq-question, .date-card h3 {
@@ -780,6 +784,8 @@
       .section-title {
         font-size: 1.8rem;
         margin-bottom: 2rem;
+        width: 100%;
+        padding: 0 1rem;
       }
       
       section {
@@ -836,6 +842,8 @@
       
       .section-title {
         font-size: 1.6rem;
+        width: 100%;
+        padding: 0 0.5rem;
       }
       
       .feature-card h3, .instructor-name, .faq-question {
