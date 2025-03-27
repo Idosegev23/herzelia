@@ -682,20 +682,37 @@
         flex-direction: column;
         text-align: center;
         padding-top: 6rem;
+        padding-bottom: 4rem;
       }
 
       .hero-content {
         margin-right: 0;
         margin-bottom: 3rem;
+        max-width: 100%;
       }
 
       .hero h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
       }
 
       .hero-image {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+      }
+      
+      .hero-image-inner img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .features-grid, .benefits-grid, .instructors-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .dates-container {
@@ -708,6 +725,10 @@
         width: 100%;
         max-width: 300px;
       }
+      
+      .requirements-container, .location-container, .faq-container {
+        padding: 2rem;
+      }
     }
 
     @media (max-width: 768px) {
@@ -719,30 +740,116 @@
       .logo {
         margin-bottom: 1rem;
       }
+      
+      .logo img {
+        height: 60px;
+      }
 
       nav ul {
-        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+      }
+      
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding: 2rem 1rem;
+        min-height: auto;
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
       }
-
-      .hero-image {
-        width: 300px;
-        height: 300px;
+      
+      .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
       }
 
       .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+      
+      section {
+        padding: 3rem 1rem;
       }
 
       .feature-card, .benefit-item, .faq-item, .instructor-card {
         padding: 1.5rem;
+      }
+      
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .benefit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .benefit-icon {
+        margin-bottom: 1rem;
+        min-width: auto;
+      }
+      
+      .instructor-image {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .footer-links {
+        gap: 1rem;
+      }
+      
+      .footer-links a {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-image {
+        width: 200px;
+        height: 200px;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .feature-card h3, .instructor-name, .faq-question {
+        font-size: 1.2rem;
+      }
+      
+      .requirements-container, .location-container {
+        padding: 1.5rem;
+      }
+      
+      .requirements-list li {
+        padding-right: 25px;
+        font-size: 0.95rem;
+      }
+      
+      .date-card {
+        padding: 1.5rem;
+      }
+      
+      .date-card h3 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -755,15 +862,16 @@
   <header>
     <div class="logo">
       <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1742806446/Logo2025_xbrzm3.png" alt="לוגו">
-      <div class="logo-text">סדנת בינה מלאכותית</div>
+      <div class="logo-text">סדנת AI</div>
     </div>
     <nav>
       <ul>
-        <li><a href="#home">דף הבית</a></li>
-        <li><a href="#features">נושאי הסדנה</a></li>
-        <li><a href="#dates">תאריכים</a></li>
-        <li><a href="#requirements">דרישות</a></li>
-        <li><a href="#location">מיקום</a></li>
+        <li><a href="#home" class="smooth-scroll">דף הבית</a></li>
+        <li><a href="#features" class="smooth-scroll">נושאים</a></li>
+        <li><a href="#benefits" class="smooth-scroll">יתרונות</a></li>
+        <li><a href="#instructors" class="smooth-scroll">המנחה</a></li>
+        <li><a href="#dates" class="smooth-scroll">תאריכים</a></li>
+        <li><a href="#location" class="smooth-scroll">מיקום</a></li>
       </ul>
     </nav>
   </header>
@@ -936,7 +1044,7 @@
     <div class="footer-content">
       <div class="logo">
         <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1742806446/Logo2025_xbrzm3.png" alt="לוגו" style="height: 80px;">
-        <div class="logo-text">סדנת בינה מלאכותית</div>
+        <div class="logo-text">סדנת AI</div>
       </div>
       <div class="footer-links">
         <a href="#home">דף הבית</a>
@@ -947,7 +1055,7 @@
         <a href="#dates">תאריכים</a>
         <a href="#location">מיקום</a>
       </div>
-      <p class="copyright">© 2025 סדנת בינה מלאכותית. כל הזכויות שמורות.</p>
+      <p class="copyright">© 2025 סדנת AI. כל הזכויות שמורות.</p>
     </div>
   </footer>
 
